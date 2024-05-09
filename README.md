@@ -37,6 +37,6 @@ Information on quant topics and finance in general, created for job prep but hop
 #### [Price Change with Duration and Convexity](https://pages.stern.nyu.edu/~igiddy/articles/duration-convexity.htm)
 
   - $\Delta P$: change in price, P: price, $\Delta y$: change in YTM <br>
-    - $\frac{\Delta P}{P} \approx -ModDuration*\Delta y + \frac{Convexity}{2}(\Delta y)^{2}$ (this comes from Taylor series) <br>
-    - % Change in Price $\approx -ModDuration*\Delta y + \frac{Convexity}{2}*(\Delta y)^{2}$ (where $\Delta y$ is in %) <br>
+    - $\frac{\Delta P}{P} \approx -ModDuration*\Delta y + \frac{Convexity}{2}(\Delta y)^{2}$ -- (this comes from Taylor series) <br>
+    - % Change in Price $\approx -ModDuration*\Delta y + \frac{Convexity}{2}(\Delta y)^{2}$ -- (where $\Delta y$ is in %) <br>
     - [Extra Info](https://www.wallstreetmojo.com/convexity-of-a-bond-formula-duration/)
