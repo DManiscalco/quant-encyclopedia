@@ -92,7 +92,21 @@ Information on quant topics and finance in general, created for job prep but hop
   - Call: $\rho_{c} = \frac{\partial c}{\partial r} = K(T-t)e^{-r(T-t)}\Phi(d_{2})$ <br>
   - Put: $\rho_{p} = \frac{\partial p}{\partial r} = -K(T-t)e^{-r(T-t)}\Phi(-d_{2})$ <br>
 
+#### [Delta-Gamma-Vega Approximation](https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf) (by Taylor Series)
+
+  - Call: $c(S+\Delta S, \sigma + \Delta \sigma) \approx c(S,\sigma) + \Delta S \frac{\partial c}{\partial S} + \frac{1}{2}(\Delta S)^{2}\frac{\partial^{2} c}{\partial S^{2}} + \Delta \sigma \frac{\partial c}{\partial \sigma}$ <br>
+  - Put: $p(S+\Delta S, \sigma + \Delta \sigma) \approx p(S,\sigma) + \Delta S \frac{\partial p}{\partial S} + \frac{1}{2}(\Delta S)^{2}\frac{\partial^{2} p}{\partial S^{2}} + \Delta \sigma \frac{\partial p}{\partial \sigma}$ <br>
+
 ### Black-Scholes Equation
 
-  - $\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}+rS\frac{\partial V}{\partial S}-rV=0$
+  - $\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}+rS\frac{\partial V}{\partial S}-rV=0$ <br>
 
+## Equities
+
+### Stocks
+
+#### Stock Price Dynamics -- [GBM](https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf)
+
+- $\frac{dS_{t}}{S_{t}} = (r-q)dt + \sigma dB_{t}$ <br>
+- $S_{t} = S_{0}e^{(r-q-\frac{\sigma^{2}}{2})t + \sigma B_{t}}$ <br>
+- $S_{T}$ follows a lognormal distribution: $ln(S_{T}) \sim N(ln(S_{0}) + (r-q-\frac{\sigma^{2}}{2})T, \sigma^{2}T)$ <br>
