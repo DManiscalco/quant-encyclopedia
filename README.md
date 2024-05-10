@@ -57,10 +57,10 @@ Information on quant topics and finance in general, created for job prep but hop
     - Call Option: $c=S_{t}\Phi(d_{1})-Ke^{-r(T-t)}\Phi(d_{2})$ <br>
     - Put Option: $p=-S_{t}\Phi(-d_{1})+Ke^{-r(T-t)}\Phi(-d_{2})$ <br>
       - where: $d_{1}=d_{2}+\sigma \sqrt{T-t}$ and $d_{2}=\frac{ln(\frac{S_{t}}{K})+(r-\frac{\sigma^{2}}{2})(T-t)}{\sigma \sqrt{T-t}}$ <br>
-    - With dividends: <br>
-      - Call Option: $c=S_{t}e^{-q(T-t)}\Phi(d_{1})-Ke^{-r(T-t)}\Phi(d_{2})$ <br>
-      - Put Option: $p=-S_{t}e^{-q(T-t)}\Phi(-d_{1})+Ke^{-r(T-t)}\Phi(-d_{2})$ <br>
-        - where: $d_{1}=d_{2}+\sigma \sqrt{T-t}$ and $d_{2}=\frac{ln(\frac{S_{t}}{K})+(r-q-\frac{\sigma^{2}}{2})(T-t)}{\sigma \sqrt{T-t}}$ <br>
+  - With dividends: <br>
+    - Call Option: $c=S_{t}e^{-q(T-t)}\Phi(d_{1})-Ke^{-r(T-t)}\Phi(d_{2})$ <br>
+    - Put Option: $p=-S_{t}e^{-q(T-t)}\Phi(-d_{1})+Ke^{-r(T-t)}\Phi(-d_{2})$ <br>
+      - where: $d_{1}=d_{2}+\sigma \sqrt{T-t}$ and $d_{2}=\frac{ln(\frac{S_{t}}{K})+(r-q-\frac{\sigma^{2}}{2})(T-t)}{\sigma \sqrt{T-t}}$ <br>
 
 ### [Greeks](https://www.macroption.com/black-scholes-formula/#d1-d2) -- [Calculator Link](https://www.barchart.com/options/options-calculator)
 
