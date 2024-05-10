@@ -64,18 +64,33 @@ Information on quant topics and finance in general, created for job prep but hop
 
 ### [Greeks](https://www.macroption.com/black-scholes-formula/#d1-d2) -- [Calculator Link](https://www.barchart.com/options/options-calculator)
 
+  - $d_{1}=\frac{ln(\frac{S_{t}}{K})+(r-q+\frac{\sigma^{2}}{2})(T-t)}{\sigma \sqrt{T-t}}$ <br>
+  - $d_{2}=\frac{ln(\frac{S_{t}}{K})+(r-q-\frac{\sigma^{2}}{2})(T-t)}{\sigma \sqrt{T-t}}$ <br>
+  - $\phi(z) = \frac{1}{\sqrt{2\pi}}e^{\frac{-z^{2}}{2}}$ (PDF of the standard normal)<br>
+  - $\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-\frac{{u^{2}}}{2}}du$ (CDF of the standard normal)<br>
+
 #### [Delta](https://www.merrilledge.com/investment-products/options/learn-understand-delta-options) ($\Delta$)
 
-  - Call: $\Delta = \frac{\partial c}{\partial S_{t}} = e^{-q(T-t)}\Phi(d_{1})$ <br>
-  - Put: $\Delta = \frac{\partial p}{\partial S_{t}} = e^{-q(T-t)}(\Phi(d_{1})-1) = -e^{-q(T-t)}\Phi(-d_{1})$ <br>
-
-#### [Theta](https://www.merrilledge.com/investment-products/options/learn-understand-theta-options) ($\Theta$)
+  - Call: $\Delta_{c} = \frac{\partial c}{\partial S_{t}} = e^{-q(T-t)}\Phi(d_{1})$ <br>
+  - Put: $\Delta_{p} = \frac{\partial p}{\partial S_{t}} = e^{-q(T-t)}(\Phi(d_{1})-1) = -e^{-q(T-t)}\Phi(-d_{1})$ <br>
 
 #### [Gamma](https://www.merrilledge.com/investment-products/options/learn-understand-gamma-options) ($\Gamma$)
 
+  - Call/Put: $\Gamma = \frac{\partial^{2}c}{\partial S_{t}^{2}} = \frac{\partial^{2}p}{\partial S_{t}^{2}} = \frac{e^{-q(T-t)}\phi(d_{1})}{S_{t}\sigma\sqrt{T-t}}$ <br>
+
+#### [Theta](https://www.merrilledge.com/investment-products/options/learn-understand-theta-options) ($\Theta$)
+
+  - Call: $\Theta_{c} = \frac{\partial c}{\partial t} = -\frac{\sigma e^{-q(T-t)} S_{t}\phi(d_{1})}{2\sqrt{T-t}} - rKe^{-r(T-t)}\Phi(d_{2}) + qS_{t}e^{-q(T-t)}\Phi(d_{1})$ <br>
+  - Put: $\Theta_{p} = \frac{\partial p}{\partial t} = -\frac{\sigma e^{-q(T-t)} S_{t}\phi(d_{1})}{2\sqrt{T-t}} + rKe^{-r(T-t)}\Phi(-d_{2}) - qS_{t}e^{-q(T-t)}\Phi(-d_{1})$ <br>
+
 #### [Vega](https://www.merrilledge.com/investment-products/options/learn-understand-vega-options) ($\nu$)
 
+  - Call/Put: $\nu = \frac{\partial c}{\partial \sigma} = \frac{\partial p}{\partial \sigma} = e^{-q(T-t)}S_{t}\phi(d_{1})\sqrt{T-t}$ <br>
+
 #### [Rho](https://www.merrilledge.com/investment-products/options/learn-understand-rho-options) ($\rho$)
+
+  - Call: $\rho_{c} = \frac{\partial c}{\partial r} = K(T-t)e^{-r(T-t)}\Phi(d_{2})$ <br>
+  - Put: $\rho_{p} = \frac{\partial p}{\partial r} = -K(T-t)e^{-r(T-t)}\Phi(-d_{2})$ <br>
 
 ### Black-Scholes Equation
 
