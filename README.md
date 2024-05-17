@@ -1,6 +1,33 @@
 # quant-encyclopedia
 Information on quant topics and finance in general, created for job prep but hopefully something that can help others as well
 
+## Black-Scholes
+
+### [Assumptions](https://www.macroption.com/black-scholes-assumptions/)
+
+  - Risky asset with:<br>
+    - Random walk<br>
+    - Constant volatility ($\sigma$)<br>
+    - Normal distribution of returns on risky asset<br>
+  - Riskless asset with:<br>
+    - Constant risk-free rate ($r$)<br>
+  - Market with:<br>
+    - No transaction costs<br>
+    - Perfect liquidity<br>
+    - Ability to trade fractions of shares<br>
+    - Short selling available<br>
+    - No arbitrage<br>
+
+### Black-Scholes Model/Formula
+
+  - Call Option: $c=S_{t}\Phi(d_{1})-Ke^{-r(T-t)}\Phi(d_{2})$ <br>
+  - Put Option: $p=-S_{t}\Phi(-d_{1})+Ke^{-r(T-t)}\Phi(-d_{2})$ <br>
+    - where: $d_{1}=d_{2}+\sigma \sqrt{T-t}$ and $d_{2}=\frac{ln(\frac{S_{t}}{K})+(r-\frac{\sigma^{2}}{2})(T-t)}{\sigma \sqrt{T-t}}$ <br>
+
+### Black-Scholes Equation
+
+  - $\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}+rS\frac{\partial V}{\partial S}-rV=0$ <br>
+
 ## Fixed Income
 
 ### Bonds
@@ -40,6 +67,18 @@ Information on quant topics and finance in general, created for job prep but hop
     - $\frac{\Delta P}{P} \approx -ModDuration*\Delta y + \frac{Convexity}{2}(\Delta y)^{2}$ -- (this comes from Taylor series) <br>
     - % Change in Price $\approx -ModDuration*\Delta y + \frac{Convexity}{2}(\Delta y)^{2}$ -- (where $\Delta y$ is in %) <br>
     - [Extra Info](https://www.wallstreetmojo.com/convexity-of-a-bond-formula-duration/) <br>
+
+## Interest Rate Models
+
+### Hull-White Model
+
+  - $dR_{t}=(a_{t}-b_{t}R_{t})dt+\sigma_{t}dW_{t}$ where $a_{t}$, $b_{t}$, and $\sigma_{t}$ are deterministic and positively valued, and $W_{t}$ is a driftless Brownian Motion under $Q$<br>
+  - NOTE: In this model, it is possible for $R_{t}$ to go negative
+
+### Cox-Ingersoll-Ross Model
+
+  - $dR_{t}=(a-bR_{t})dt+\sigma\sqrt{R_{t}}dW_{t}$ where $a$, $b$, and $\sigma$ are deterministic and positively valued, and $W_{t}$ is a driftless Brownian Motion under $Q$<br>
+  - NOTE: $\sqrt{R_{t}}$ means that $R_{t}$ will not go negative
 
 ## Options
 
@@ -97,9 +136,9 @@ Information on quant topics and finance in general, created for job prep but hop
   - Call: $c(S+\Delta S, \sigma + \Delta \sigma) \approx c(S,\sigma) + \Delta S \frac{\partial c}{\partial S} + \frac{1}{2}(\Delta S)^{2}\frac{\partial^{2} c}{\partial S^{2}} + \Delta \sigma \frac{\partial c}{\partial \sigma}$ <br>
   - Put: $p(S+\Delta S, \sigma + \Delta \sigma) \approx p(S,\sigma) + \Delta S \frac{\partial p}{\partial S} + \frac{1}{2}(\Delta S)^{2}\frac{\partial^{2} p}{\partial S^{2}} + \Delta \sigma \frac{\partial p}{\partial \sigma}$ <br>
 
-### Black-Scholes Equation
+### Greeks Movements
 
-  - $\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}+rS\frac{\partial V}{\partial S}-rV=0$ <br>
+####
 
 ## Equities
 
