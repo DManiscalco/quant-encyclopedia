@@ -1,6 +1,40 @@
 # quant-encyclopedia
 Information on quant topics and finance in general, created for job prep but hopefully something that can help others as well
 
+========================================================================================
+# Table of Contents
+<!--ts-->
+   * [Black-Scholes](#black-scholes)
+      * [Assumptions](#assumptions)
+      * [Black-Scholes Model/Formula](#black-scholes-modelformula)
+      * [Black-Scholes Equation]()
+   * [Fixed Income](#fixed-income)
+      * [Bonds](#bonds)
+        * [Pricing](#pricing----calculator-link)
+        * [Macaulay Duration](#macaulay-duration----calculator-link)
+        * [Modified Duration](#modified-duration----calculator-link)
+        * [Convexity](#convexity----calculator-link)
+        * [Price Change with Duration and Convexity](#price-change-with-duration-and-convexity)
+   * [Interest Rate Models](#interest-rate-models)
+     * [Hull-White Model](#hull-white-model)
+     * [Cox-Ingersoll-Ross Model](#cox-ingersoll-ross-model)
+   * [Options](#options)
+     * [Option Pricing](#option-pricing)
+     * [Black-Scholes Formula (to price Vanilla Options)](#black-scholes-formula-to-price-vanilla-options)
+     * [Greeks](#greeks----calculator-link)
+       * [Delta](#delta-delta)
+       * [Gamma](#gamma-gamma)
+       * [Theta](#theta-theta)
+       * [Vega](#vega-nu)
+       * [Rho](#rho-rho)
+       * [Delta Gamma Vega Approximation](#delta-gamma-vega-approximation-by-taylor-series)
+     * [Greeks Movements](#greeks-movements)
+   * [Equities](#equities)
+     * [Stocks](#stocks)
+       * [Stock Price Dynamics](#stock-price-dynamics----gbm)
+<!--te-->
+========================================================================================
+
 # Black-Scholes
 
 ## [Assumptions](https://www.macroption.com/black-scholes-assumptions/)
