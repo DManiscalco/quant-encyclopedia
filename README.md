@@ -7,7 +7,10 @@ Information on quant topics and finance in general, created for job prep but hop
    * [Black-Scholes](#black-scholes)
       * [Assumptions](#assumptions)
       * [Black-Scholes Model/Formula](#black-scholes-modelformula)
-      * [Black-Scholes Equation]()
+      * [Black-Scholes Equation](#black-scholes-equation)
+   * [Equities](#equities)
+      * [Stocks](#stocks)
+        * [Stock Price Dynamics](#stock-price-dynamics----gbm)
    * [Fixed Income](#fixed-income)
       * [Bonds](#bonds)
         * [Pricing](#pricing----calculator-link)
@@ -29,9 +32,9 @@ Information on quant topics and finance in general, created for job prep but hop
        * [Rho](#rho-rho)
        * [Delta Gamma Vega Approximation](#delta-gamma-vega-approximation-by-taylor-series)
      * [Greeks Movements](#greeks-movements)
-   * [Equities](#equities)
-     * [Stocks](#stocks)
-       * [Stock Price Dynamics](#stock-price-dynamics----gbm)
+   * [Statistics](#statistics)
+     * [Linear Regression](#linear-regression)
+       * [Assumptions](#linear-regression-assumptions)
 <!--te-->
 ========================================================================================
 
@@ -61,6 +64,16 @@ Information on quant topics and finance in general, created for job prep but hop
 ## Black-Scholes Equation
 
   - $\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}+rS\frac{\partial V}{\partial S}-rV=0$ <br>
+
+# Equities
+
+## Stocks
+
+### Stock Price Dynamics -- [GBM](https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf)
+
+- $\frac{dS_{t}}{S_{t}} = (r-q)dt + \sigma dB_{t}$ <br>
+- $S_{t} = S_{0}e^{(r-q-\frac{\sigma^{2}}{2})t + \sigma B_{t}}$ <br>
+- $S_{T}$ follows a lognormal distribution: $ln(S_{T}) \sim N(ln(S_{0}) + (r-q-\frac{\sigma^{2}}{2})T, \sigma^{2}T)$ <br>
 
 # Fixed Income
 
@@ -172,14 +185,11 @@ Information on quant topics and finance in general, created for job prep but hop
 
 ## Greeks Movements
 
-###
+# Statistics
 
-# Equities
+## Linear Regression
 
-## Stocks
+### Linear Regression Assumptions
 
-### Stock Price Dynamics -- [GBM](https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf)
 
-- $\frac{dS_{t}}{S_{t}} = (r-q)dt + \sigma dB_{t}$ <br>
-- $S_{t} = S_{0}e^{(r-q-\frac{\sigma^{2}}{2})t + \sigma B_{t}}$ <br>
-- $S_{T}$ follows a lognormal distribution: $ln(S_{T}) \sim N(ln(S_{0}) + (r-q-\frac{\sigma^{2}}{2})T, \sigma^{2}T)$ <br>
+
