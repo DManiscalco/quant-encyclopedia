@@ -1,7 +1,7 @@
 # quant-encyclopedia
 Information on quant topics and finance in general, created for job prep but hopefully something that can help others as well
 
-========================================================================================
+===================================================================
 # Table of Contents
 <!--ts-->
    * [Black-Scholes](#black-scholes)
@@ -34,9 +34,12 @@ Information on quant topics and finance in general, created for job prep but hop
      * [Greeks Movements](#greeks-movements)
    * [Statistics](#statistics)
      * [Linear Regression](#linear-regression)
-       * [Assumptions](#linear-regression-assumptions)
+       * [Linear Regression Assumptions](#linear-regression-assumptions)
+       * [Simple Linear Model](#simple-linear-model)
+       * [Parameter Estimation](#parameter-estimation)
+       * [Parameter Estimation Properties](#parameter-estimation-properties)
 <!--te-->
-========================================================================================
+===================================================================
 
 # Black-Scholes
 
@@ -189,7 +192,40 @@ Information on quant topics and finance in general, created for job prep but hop
 
 ## Linear Regression
 
-### Linear Regression Assumptions
+### [Linear Regression Assumptions](https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/assumptions-of-linear-regression/)
 
+  - Linear relationship between the dependent and independent variables<br>
+  - The residuals (difference between observed values and predicted values) are normally distributed - could be done using [Q-Q plot](https://statisticsbyjim.com/graphs/qq-plot/) or a [Kolmogorov-Smirnov Test](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35g.htm) among other tests<br>
+  - No multicollinearity: the independent variables are not too highly correlated with each other<br>
+  - [Homoscedasticity](https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/homoscedasticity/): The variance of the residuals does not change across all values of the independent variables<br>
 
+### Simple Linear Model
 
+  - $Y=\beta_{0}+\beta_{1}X+\epsilon$ where: <br>
+    - $\beta_{0}$ is fixed intercept parameter<br>
+    - $\beta_{1}$ is fixed slope parameter<br>
+    - $\epsilon$ is random error where $\mathbf{E}[\epsilon |X]=0$, $V(\epsilon |X)=\sigma^{2}$<br>
+    - Under these assumptions: $\mathbf{E}[Y|X=x]=\beta_{0}+\beta_{1}x$<br>
+
+### [Parameter Estimation](https://www.immagic.com/eLibrary/ARCHIVES/GENERAL/WIKIPEDI/W120529O.pdf)
+
+  - Predicted value of $\hat{Y_{i}}$: $\hat{Y_{i}}=\hat{\beta_{0}}+\hat{\beta_{1}}X_{i}$ where:<br>
+    - $\hat{\beta_{0}}$ and $\hat{\beta_{1}}$ are estimates of $\beta_{0}$ and $\beta_{1}$<br>
+  - Residuals: $\hat{\epsilon_{i}}=Y_{i}-\hat{Y_{i}}=Y_{i}-(\hat{\beta_{0}}+\hat{\beta_{1}}X_{i})$<br>
+  - Residual Sum of Squares (RSS): RSS = $\Sigma_{i=1}^{n} \hat{\epsilon}_{i}^{2}$<br>
+    - Minimizing RSS gives:<br>
+      - $\hat{\beta_{1}}=\frac{\Sigma_{i=1}^{n}(X_{i}-\bar{X_{n}})(Y_{i}-\bar{Y_{n}})}{\Sigma_{i=1}^{n}(X_{i}-\bar{X_{n}})^{2}}$<br>
+      - $\hat{\beta_{0}}=\bar{Y_{n}}-\hat{\beta_{1}}\bar{X}_{n}$<br>
+  - $\hat{\sigma}^{2}=(\frac{1}{n-2})\Sigma_{i=1}^{n}\hat{\epsilon}_{i}^{2}$<br>
+
+### Parameter Estimation Properties
+
+  - $V(\hat{\beta_{1}}|x_{1},...,x_{n})=\frac{\sigma^{2}}{\Sigma(x_{i}-\bar{x}_{n})^{2}}$<br>
+  - $V(\hat{\beta_{0}}|x_{1},...,x_{n})=\frac{\sigma^{2}}{\Sigma(x_{i}-\bar{x}_{n})^{2}}\frac{\Sigma x_i^2}{n}$<br>
+  - $Cov(\hat{\beta_{0}},\hat{\beta_{1}})=\frac{-\sigma^{2} \bar{x_{n}}}{\Sigma(x_{i}-\bar{x}_{n})^{2}}$<br>
+    - When $\sigma^{2}$ is unknown, use $\hat{\sigma}^{2}$ and take the square root to get $\hat{se}(\hat{\beta_{0}})$ and $\hat{se}(\hat{\beta}_{1})$ as estimators<br>
+  - [By Central Limit Theorem](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html):
+    - $\frac{\hat{\beta_{0}}-\beta_{0}}{\hat{se}(\hat{\beta_{0}})} \xrightarrow{d} N(0,1)$<br>
+    - $\frac{\hat{\beta_{1}}-\beta_{1}}{\hat{se}(\hat{\beta_{1}})} \xrightarrow{d} N(0,1)$<br>
+    - [Confidence Intervals](http://www.stat.yale.edu/Courses/1997-98/101/confint.htm): $\hat{\beta_{0}}\pm z_{\frac{\alpha}{2}}\hat{se}(\hat{\beta_{0}})$ and $\hat{\beta_{1}}\pm z_{\frac{\alpha}{2}}\hat{se}(\hat{\beta_{1}})$<br>
+  
