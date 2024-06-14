@@ -94,7 +94,7 @@ Information on quant topics and finance in general, created for job prep but hop
 
   - Weighted average time to receive cash flows of bond <br>
     - t: current period, T: number of periods to maturity, $PV_{t}$: present value of the current coupon <br>
-    - Macaulay Duration = $\frac{1}{T} * \frac{1}{Bond\ Price}\Sigma_{t=1}^{T}t * PV_{t}$ <br>
+    - Macaulay Duration = $\frac{1}{Bond\ Price}\Sigma_{t=1}^{T}t * PV_{t}$ <br>
 
 ### [Modified Duration](https://www.investopedia.com/terms/m/modifiedduration.asp) -- [Calculator Link](https://dqydj.com/bond-duration-calculator/)
 
